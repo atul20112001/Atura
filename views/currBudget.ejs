@@ -1,0 +1,35 @@
+<%- include("components/header") -%>
+    <%- include("components/navbar") -%>
+        <%- include("components/month") -%>
+            <main>
+                <a href="/fillBudget">
+                    <div id="update">
+                        Update
+                    </div>
+                </a>
+                <div class="expenseitems">
+                    <div class="category">
+                        <p>Category</p>
+                    </div>
+                    <div class="amount">
+                        <p>Amount</p>
+                    </div>
+                </div>
+                <% expenseList.forEach(function(item){ %>
+                    <div class="expenseitems">
+                        <div class="category">
+                            <p>
+                                <%=item.category%>
+                            </p>
+                        </div>
+                        <div class="amount">
+                            <p>
+                                <%=item.amount%>
+                            </p>
+                        </div>
+                    </div>
+                    <%})%>
+            </main>
+            </div>
+            </header>
+            <%- include("components/footer") -%>
